@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Schedule</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-kp0z9ivl3UvvNEHosrdMpqF9sZskugU&callback=initMap&libraries=places"
+      async
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <nav>
+      <a href="myCalender.html">My Schedule</a> |
+      <a href="myPlaces.html">My Favorite Places</a> |
+      <a href="myForm.html">Form Input</a> |
+      <a href="myWidgets.html">My Widgets</a>
+    </nav>
+    <div id="google_translate_element"></div>
+    <h1>My Spring 19 Schedule</h1>
+    <div class="table">
+      <table id="myTable">
+        <tr>
+          <th>Monday</th>
+          <td>
+            <p class="italic">9:45 AM - 11:00 AM</p>
+            <p>
+              <span class="getname">UNITE - KH 3-210</span>
+              <img src="keller.jpg" alt="Keller Hall" />
+            </p>
+            <p class="getplace">200 Union Street Se Minneapolis, MN, 55455</p>
+          </td>
+          <td>
+            <p class="italic">11:15 AM - 12:05 PM</p>
+            <p>
+              <span class="getname">UNITE - KH 3-210</span>
+              <img src="keller.jpg" alt="Keller Hall" />
+            </p>
+            <p class="getplace">200 Union Street Se Minneapolis, MN, 55455</p>
+          </td>
+          <td>
+            <p class="italic">6:00 PM - 8:45 PM</p>
+            <p>
+              <span class="getname">INET 4061 - MCB 2-122</span>
+              <img
+                src="molecularcellularbio.jpg"
+                alt="Molecular Cellular Bio"
+              />
+            </p>
+            <p class="getplace">
+              420 Washington Avenue Se Minneapolis, MN, 55455
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th>Tuesday</th>
+          <td>
+            <p class="italic">11:15 AM - 12:30 PM</p>
+            <p>
+              <span class="getname">WRIT 3563W - AKERH 211</span>
+              <img src="akerman.jpg" alt="Akerman Hall" />
+            </p>
+            <p class="getplace">110 Union St SE, Minneapolis, MN 55455</p>
+          </td>
+          <td>
+            <p class="italic">4:00 PM - 5:15 PM</p>
+            <p>
+              <span class="getname">CSCI 4511W - AMUNDH B75</span>
+              <img src="amundson.jpg" alt="Amundson Hall" />
+            </p>
+            <p class="getplace">421 Washington Ave SE, Minneapolis, MN 55455</p>
+          </td>
+          <td>
+            <p class="italic">6:30 PM - 9:00 PM</p>
+            <p>
+              <span class="getname">CSCI 4131 - KH 2-210</span>
+              <img src="keller.jpg" alt="Keller Hall" />
+            </p>
+            <p class="getplace">200 Union Street Se Minneapolis, MN, 55455</p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Wednesday</th>
+          <td>
+            <p class="italic">9:55 AM - 12:10 PM</p>
+            <p>
+              <span class="getname"> Greeter - Athlete's Village</span>
+              <img src="Athletes-Village.jpg" alt="Athlete's Village" />
+            </p>
+            <p class="getplace">
+              Bierman Field Athletic Building, 516 15th Ave SE, Minneapolis, MN
+              55455
+            </p>
+          </td>
+          <td>
+            <p class="italic">2:30 PM - 3:45 PM</p>
+            <p>
+              <span class="getname">UNITE - KH 3-115</span>
+              <img src="keller.jpg" alt="Keller Hall" />
+            </p>
+            <p class="getplace">200 Union Street Se Minneapolis, MN, 55455</p>
+          </td>
+
+          <td>
+            <p class="italic">6:30 PM - 9:00 PM</p>
+            <p>
+              <span class="getname">CSCI 5421 - KH 2-210</span>
+              <img src="keller.jpg" alt="Keller Hall" />
+            </p>
+            <p class="getplace">200 Union Street Se Minneapolis, MN, 55455</p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Thursday</th>
+          <td>
+            <p class="italic">11:15 AM - 12:30 PM</p>
+            <p>
+              <span class="getname">WRIT 3563W - AKERH 211</span>
+              <img src="akerman.jpg" alt="Akerman Hall" />
+            </p>
+            <p class="getplace">110 Union St SE, Minneapolis, MN 55455</p>
+          </td>
+          <td>
+            <p class="italic">1:00 PM - 2:15 PM</p>
+            <p>
+              <span class="getname">UNITE - KH 3-111</span>
+              <img src="keller.jpg" alt="Keller Hall" />
+            </p>
+            <p class="getplace">200 Union Street Se Minneapolis, MN, 55455</p>
+          </td>
+          <td>
+            <p class="italic">4:00 PM - 5:15 PM</p>
+            <p>
+              <span class="getname">CSCI 4511W - AMUNDH B75</span>
+              <img src="amundson.jpg" alt="Amundson Hall" />
+            </p>
+            <p class="getplace">421 Washington Ave SE, Minneapolis, MN 55455</p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Friday</th>
+          <td colspan="3">
+            <p class="italic">
+              There is nothing scheduled for the day
+              <img src="freetime.jpg" alt="freetime clock" />
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Saturday</th>
+          <td colspan="3">
+            <p class="italic">
+              There is nothing scheduled for the day
+              <img src="freetime.jpg" alt="freetime clock" />
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Sunday</th>
+          <td colspan="3">
+            <p class="italic">
+              There is nothing scheduled for the day
+              <img src="freetime.jpg" alt="freetime clock" />
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="showFirst">
+      <div class="mySlides">
+        <img class="big" src="keller.jpg" alt="Keller Hall" />
+      </div>
+
+      <div class="mySlides">
+        <img
+          class="big"
+          src="molecularcellularbio.jpg"
+          alt="Molecular Cellular Bio"
+        />
+      </div>
+
+      <div class="mySlides">
+        <img class="big" src="akerman.jpg" alt="Akerman Hall" />
+      </div>
+
+      <div class="mySlides">
+        <img class="big" src="amundson.jpg" alt="Amundson Hall" />
+      </div>
+
+      <div class="mySlides">
+        <img class="big" src="Athletes-Village.jpg" alt="Athlete's Village" />
+      </div>
+
+      <div class="mySlides">
+        <img class="big" src="freetime.jpg" alt="freetime clock" />
+      </div>
+
+      <div class="mySlides">
+        <img class="big" src="gophers-mascot.png" alt="Goldy" />
+      </div>
+    </div>
+
+    <div class="slidesButton">
+      <button onclick="startClock()">Start</button>
+      <button onclick="int=clearInterval(int)">Stop</button>
+    </div>
+
+    <div class="mpnl">
+      <div id="right-panel"><span class="move_left"></span></div>
+      <div id="map"></div>
+      <!-- </div>
+
+<div class="mmf"> -->
+      <div class="mapForm">
+        <label for="find"><span class="cmargin">Find:</span></label>
+
+        <select name="find" id="find" onchange="checkOptions()">
+          <option value="restaurant">Restaurant</option>
+          <option value="hospital">Hospital</option>
+          <option value="parking">Parking</option>
+          <option value="supermarket">Supermarket</option>
+          <option value="null" id="others">Other</option>
+        </select>
+
+        <input
+          type="text"
+          name="otherplaces"
+          maxlength="40"
+          placeholder="Enter other places"
+          value=""
+          id="otherplaces"
+          disabled
+        />
+        <br />
+        <span class="cmargin">in</span>
+        <input type="number" name="radius" value="500" id="radius" />
+        <span class="cmargin">meters</span>
+        <p><input type="submit" value="Search" id="search" /></p>
+
+        <hr />
+
+        <label for="destination"
+          ><span class="cmargin">Direction to</span></label
+        >
+
+        <input
+          type="text"
+          name="destination"
+          maxlength="40"
+          value="Coffman Union"
+          id="destination"
+        />
+        <span class="cmargin">by</span>
+
+        <p class="transport">
+          <input type="radio" name="transport" value="WALKING" checked />
+          Walk<br />
+          <input type="radio" name="transport" value="DRIVING" /> Drive<br />
+          <input type="radio" name="transport" value="TRANSIT" /> Transit
+        </p>
+
+        <p><input type="submit" value="Go" id="go" /></p>
+      </div>
+    </div>
+  </body>
+</html>

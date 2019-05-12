@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="/client/css/style.css"
+  />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar nav-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/"><b>Home</b></a>
+          </li>
+          <li>
+            <a href="/schedule"><b>Schedule</b></a>
+          </li>
+          <li>
+            <a href="/addSchedule"><b>Add Schedule Event</b></a>
+          </li>
+          <li>
+            <a href="/stock"><b>Stock Page</b></a>
+          </li>
+          <li>
+            <a href="/admin"><b>Admin</b></a>
+          </li>
+          <li>
+            <a href="/logout" >
+              <span class="glyphicon glyphicon-log-out"></span>
+            </a>
+          </li>
+        </ul>
+        <p id="displayName"></p>
+      </div>
+    </nav>
+    <br /><br /><br />
+    <div class="container">
+      <div class="panel panel-default">
+        <div class="panel-body"><center>Welcome to Stock Page</center></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <table class="table table-bordered table-hover">
+            <tbody>
+              <tr>
+                <td class="col-md-6">Company</td>
+                <td class="col-md-6">
+                  <div class="form-group">
+                    <select id="Company">
+                      <option value="MSFT">Microsoft</option>
+                      <option value="BA">Boeing Company</option>
+                      <option value="AAPL">Apple Inc</option>
+                      <option value="AMZN">Amazon</option>
+                      <option value="NVDA">NVIDIA Corporation</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <button type="button" onclick="showStock()">
+                    Get Data
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <table class="table" id="StockData">
+        <thead>
+          <tr>
+            <th scope="col">Company-MetaData</th>
+            <th scope="col">Stock-Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th id="stockMetaData" style="width:1px;"></th>
+            <th id="stockData"></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script text="text/javascript" src="/client/js/getStockInfo.js"> 
+      //TODO : Hit the TIME_SERIES_DAILY endpoint of the alphavantage API for the company that was selected in the dropdown.Display the Json data
+      
+    </script>
+    <script text="text/javascript" src="/client/js/displayUser.js"></script>
+ 
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>My Form</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <a href="myCalender.html">My Schedule</a> |
+    <a href="myPlaces.html">My Favorite Places</a> |
+    <a href="myForm.html">Form Input</a> |
+    <a href="myWidgets.html">My Widgets</a>
+  </nav>
+
+  <div class="forms">
+    <form action="success.html" onsubmit="return textValidator()" method="get" name="myForm">
+      <p>
+        <label for="day">
+          Day of the week
+          <select name="day" id="day">
+            <option value="sunday">Sunday</option>
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+          </select>
+        </label>
+      </p>
+
+      <p>
+        <label for="starttime">
+          Start Time
+          <input type="time" name="starttime" id="starttime" required>
+        </label>
+      </p>
+
+      <p>
+        <label for="endtime">
+          End Time
+          <input type="time" name="endtime" id="endtime" required>
+        </label>
+      </p>
+
+      <p>
+        <label for="eventname">
+          Event Name
+          <input type="text" name="eventname" maxlength="30" id="eventname" required>
+        </label>
+      </p>
+
+      <p>
+        <label for="eventlocation">
+          Event Location
+          <input type="text" name="eventlocation" maxlength="20" id="eventlocation" required>
+        </label>
+      </p>
+
+      <p>
+        <label for="URL">
+          Enter URL for the picture
+          <input type="url" name="url" id="URL" required>
+        </label>
+      </p>
+
+      <p>
+        <input type="submit" value="Submit">
+      </p>
+
+    </form>
+  </div>
+
+</body>
+
+</html>
+
+<!-- time input type error message -->

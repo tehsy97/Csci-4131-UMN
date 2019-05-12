@@ -1,0 +1,136 @@
+﻿<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+
+    <style>
+      pre {
+        height: auto;
+        max-height: 200px;
+        overflow: auto;
+        background-color:#eeeeee;
+        word-break: normal;
+        word-wrap: normal;
+        white-space: pre;
+      }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar nav-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/"><b>Home</b></a>
+          </li>
+          <li>
+            <a href="/schedule"><b>Schedule</b></a>
+          </li>
+          <li>
+            <a href="/addSchedule"><b>Add Schedule Event</b></a>
+          </li>
+          <li>
+            <a href="/stock"><b>Stock Page</b></a>
+          </li>
+          <li>
+            <a href="/logout" >
+              <span class="glyphicon glyphicon-log-out"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br /><br /><br />
+    <div class="container">
+      <div class="panel panel-default">
+        <div class="panel-body"><center>Welcome to Stock Page</center></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <table class="table table-bordered table-hover">
+            <tbody>
+              <tr>
+                <td class="col-md-6">Company</td>
+                <td class="col-md-6">
+                  <div class="form-group">
+                    <select id="Company">
+                      <option value="MSFT">Microsoft</option>
+                      <option value="BA">Boeing Company</option>
+                      <option value="AAPL">Apple Inc</option>
+                      <option value="AMZN">Amazon</option>
+                      <option value="NVDA">NVIDIA Corporation</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <button type="button" onclick="showStock()">
+                    Get Data
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <table class="table" id="StockData">
+        <thead>
+          <tr>
+            <th scope="col">Company-MetaData</th>
+            <th scope="col">Stock-Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th id="stockMetaData" style="width:1px;"></th>
+            <th id="stockData"></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      //TODO : Hit the TIME_SERIES_DAILY endpoint of the alphavantage API for the company that was selected in the dropdown.Display the Json data
+
+      function showStock() {
+        var stockName = document.getElementById("Company").value;
+        console.log(stockName);
+        var xmlhttp = new XMLHttpRequest();
+        var url =
+          "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=" +
+          stockName +
+          "&apikey=SDJ07B5NUY4TN429";
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+        xmlhttp.onreadystatechange = function() {
+          var state = xmlhttp.readyState;
+          var status = xmlhttp.status;
+
+          if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var stockObj = JSON.parse(xmlhttp.responseText);
+            document.getElementById("stockMetaData").innerHTML =
+              "<pre>" +
+              JSON.stringify(stockObj["Meta Data"], null, 2) +
+              "</pre>";
+            document.getElementById("stockData").innerHTML =
+              "<pre>" +
+              JSON.stringify(stockObj["Time Series (Daily)"], null, 2) +
+              "</pre>";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

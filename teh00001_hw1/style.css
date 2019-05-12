@@ -1,0 +1,43 @@
+/*links*/
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+/*table*/
+table, th, td {
+  font-family: arial, sans-serif;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  width: auto;
+}
+
+th, td {
+  padding: 1px;
+  text-align: center;
+}
+
+/*class*/
+.test {
+  font-size: 12px;
+}
+
+iframe {
+  border-width: 0px;
+}
+
+/*No errors*/

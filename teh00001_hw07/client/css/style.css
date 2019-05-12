@@ -1,0 +1,76 @@
+h1, p, ul {
+    text-align: center !important;
+}
+
+.container-fluid{
+    background-color: darkslateblue;
+}
+
+
+#displayName {
+    text-align: right !important;
+    text-decoration: underline;
+    padding: 14px 16px;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.myTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.myTable thead, .myTable th {
+    text-align: center !important;
+}
+
+.myTable td, .myTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.myTable tr:nth-child(even){background-color: #f2f2f2;}
+
+.myTable tr:hover {background-color: #ddd;}
+
+.myTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: indianred;
+    color: white;
+}
+
+pre {
+    height: auto;
+    max-height: 200px;
+    overflow: auto;
+    background-color:#eeeeee;
+    word-break: normal;
+    word-wrap: normal;
+    white-space: pre;
+  }
